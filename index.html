@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>JAVASCRIPT</title>
+		<link rel="shortcut icon" href="https://cdn-images-1.medium.com/max/800/1*Mn_mGNUGxK6gCROym_z8Bg.png">
+
+		<!-- style -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="container">
+			<div class="nav">
+				<h1 id="title">Javascript</h1>
+			</div>
+
+			<div id="T-01">
+				<h2>Tarefa - IMC</h2>
+				<hr class="hr">
+
+				<div class="content">
+					<input type="text" name="value01" id="value01" placeholder="Digite aqui sua altura... Ex: 1.68" mask="9.99" class="maskField">
+
+					<input type="text" name="value02" id="value02" placeholder="Digite aqui seu peso... Ex: 48.6" mask="999.99" class="maskField">
+
+					<button id="calcular" onclick="imc()">Calcular IMC</button>
+					<br>
+					<button id="limpar" onclick="limpar()">Limpar</button>
+
+					<div id="resultado">
+						<h3 id="imc">Seu IMC: </h3>
+						<br>
+
+						<table>
+							<tr id="tr1">
+								<th class="table-title c1">Classificação</th>
+								<th class="table-title c2">IMC</th>
+							</tr>
+							<tr id="tr2">
+								<td class="c1">Abaixo do peso</td>
+								<td class="c2">Abaixo 18,5</td>
+							</tr>
+							<tr id="tr3">
+								<td class="c1">Peso normal</td>
+								<td class="c2">18,5 - 24,9</td>
+							</tr>
+							<tr id="tr4">
+								<td class="c1">Sobrepeso</td>
+								<td class="c2">25 - 29,9</td>
+							</tr>
+							<tr id="tr5">
+								<td class="c1">Obesidade Grau I</td>
+								<td class="c2">30 - 34,9</td>
+							</tr>
+							<tr id="tr6">
+								<td class="bottom-table c1">Obesidade Grau II</td>
+								<td class="bottom-table c2">35 - 39,9</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="exercicios">
+				<div id="T-02">
+					<h2>Exercicios - JS</h2>
+					<hr class="hr">
+					<h3>Exercicio 1 - Calcular Média</h3>
+					
+					<div class="content">
+						<input type="number" name="value03" id="value03" placeholder="Digite um valor de 0 - 10" mask="99" class="maskField" >
+						<input type="number" name="value04" id="value04" placeholder="Digite um valor de 0 - 10" mask="99" class="maskField" >
+						<input type="number" name="value05" id="value05" placeholder="Digite um valor de 0 - 10" mask="99" class="maskField" >
+
+						<button id="calcular2" onclick="media()">Calcular Media</button>
+						<br>
+						<button id="limpar2" onclick="limpar2()">Limpar</button>
+						<h3 id="media">Sua Média:</h3>
+						<br>
+					</div>
+				</div>
+
+				<div id="T-03">
+					<h3>Exercicio 2 - Concatenação</h3>
+
+					<div class="content">
+						<input type="number" name="value06" id="value06" placeholder="Digite um número: " mask="99999" class="maskField">
+						<input type="number" name="value07" id="value07" placeholder="Digite um número: " mask="99999" class="maskField">
+
+						<button id="calcular3" onclick="concat()">Concatenar</button>
+
+						<div id="resultado2">
+							<h4 id="soma">Soma:</h4>
+							<h4 id="subt">Subtração:</h4>
+							<h4 id="mult">Multiplicação:</h4>
+							<h4 id="divi">Divisão:</h4>
+						</div>
+						<hr class="hr">
+
+						<input name="value08" id="value08" placeholder="Digite seu nome: " maxlength="40">
+						<input name="value09" id="value09" placeholder="Digite seu sobrenome: " maxlength="40">
+
+						<button id="calcular4" onclick="concat2()">Concatenar</button>
+						<button id="limpar3" onclick="limpar3()">Limpar</button>
+
+						<div id="resultado3" onload="concat">
+							<h4 id="nome">Nome:</h4>
+							<h4 id="sobrenome">Sobrenome:</h4>
+							<h4 id="nomeCompleto">Nome Completo:</h4>
+						</div>
+					</div>
+				</div>
+				<div id="T-04">
+					<h3>Exercicio 3 - Numero Preferido</h3>
+
+					<div class="content">
+						<button id="calcular5" onclick="numeroPreferido2()">Gerar Número</button>
+
+						<h3 id="numeroPreferido">Numero Gerado: </h3>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+
+			<div class="mtop">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/lucasbrasantos"><i class="fa fa-github"></i></a>
+			</div>
+			<div>
+				<p>Lucas - Tarefas &copy; 2021</p>
+			</div>
+
+		</footer>
+
+
+		<!-- script -->
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/sweetAlert.js"></script>
+		<script type="text/javascript" src="js/mask.js"></script>
+	</body>
+</html>
